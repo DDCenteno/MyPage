@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 /* config de grid System */
-.row::after {
+.row::after, .row::before {
 	content: "";
 	clear: both;
 	display: table;
@@ -90,9 +90,92 @@ header h1 {
 	height: 250px;
 }
 .sectionLeft {
-	background-color: blue;
+	/* background-color: blue; */
+	box-sizing: border-box;
+	padding: 20px;
+	padding-left: 90px;
+}
+.sectionLeft + .sectionRight  h2{
+	padding: 10px;
+}
+.sectionLeft p{
+	padding: 10px;
+}
+.sectionLeft button {
+	border: none;
+	background-color: #2348FFFF;
+	color: white;
+	padding: 10px;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+.sectionRight {
+	width: 250px;
+}
+.sectionRight p:firstChild {
+	padding: 10px;
+}
+.sectionRight .user, .tel{
+	padding: 5px;
+}
+.cards{
+	padding-left:100px;
+}
+.cards .container1, .container2, .container3 {
+	box-shadow: 0px 0px 3px gray;
+	width: 330px;
+	margin-right: 15px;
+}
+.cards .container1 div{
+	background-color: #B7B7B7FF;
+	height: 200px;
+	width: 300px;
+	box-sizing: border-box;
+	padding-top: 80px;
+	margin-bottom: 10px;
+}
+.cards .container1 div span{
+	margin-left: 40%;
+}
+.cards .container1 h2, .container2 h2, .container3 h2 {
+	margin:10px auto;
+}
+.cards .container1 p, .container2 p, .container3 p {
+	width: 300px;
+	margin-bottom: 15px;
+}
+.cards .container1 button, .container2 button, .container3 button {
+	border:none;
+	background-color: #2348FFFF;
+	color: white;
+	padding: 10px;
+}
+.cards .container2 div{
+	background-color: #B7B7B7FF;
+	height: 200px;
+	width: 300px;
+	box-sizing: border-box;
+	padding-top: 80px;
+	margin-bottom: 10px;
+}
+.cards .container2 div span{
+	margin-left: 40%;
+
+}
+.cards .container3 div{
+	background-color: #B7B7B7FF;
+	height: 200px;
+	width: 300px;
+	box-sizing: border-box;
+	padding-top: 80px;
+	margin-bottom: 10px;
+}
+.cards .container3 div span{
+	margin-left: 40%;
+
 }
 footer {
+	margin-top: 15px;
 	text-align: center;
 	height: 60px;
 	color: white;
