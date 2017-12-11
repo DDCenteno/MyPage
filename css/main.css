@@ -4,17 +4,25 @@
 	box-sizing: border-box;
 }
 /* config de grid System */
-.row::after {
+.container {
+	margin: 0 auto;
+	width: 100%;
+}
+.row::after, .row::before {
 	content: "";
 	clear: both;
 	display: table;
 }
+.col-1, .col-2 , .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    padding: 15px;
+}
 [class*="col-"] {
 	float: left;
-	padding: 15px;
+	min-height: 7px;
+	padding: 10px;
 }
 /* para mobile */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
  /* tablet :v */
    .col-m-1 {width: 8.33%;}
    .col-m-2 {width: 16.66%;}
@@ -29,7 +37,7 @@
    .col-m-11 {width: 91.66%;}
    .col-m-12 {width: 100%;}
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 1200px){
 	/* desktop */
 	.col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
@@ -42,7 +50,7 @@
     .col-9 {width: 75%;}
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+	.col-12 {width: 100%;}
 }
 /* terminando la configuración */
 body {
@@ -55,15 +63,32 @@ header {
 	color: white;
 	box-sizing: border-box;
 	padding: 20px;
+	width: 100%;
 }
 header h1 {
 	float: left;
 	font-size: 16px;
 	font-weight: 100;
 }
-.menunav{
-
+/* prueba menu desplegable*/
+.btn-menu{
+	display: none;
 }
+header label{
+	display: none;
+	widows: 30px;
+	height: 30px;
+	padding: 10px;
+}
+header label:hover{
+	cursor: pointer;
+}
+
+/* aca termina prueba */
+button:hover {
+	background-color: rgb(29, 43, 109);
+}
+
 .menu {
 	float: right;
 	font-size: 16px;
@@ -89,17 +114,15 @@ header h1 {
 	background-color:#B7B7B7FF;
 	color: white;
 }
-.sectionLeft, .sectionRight{
-	height: 250px;
-}
+
 .sectionLeft {
 	/* background-color: blue; */
 	box-sizing: border-box;
 	padding: 20px;
 	padding-left: 90px;
 }
-.sectionLeft + .sectionRight  h2{
-	padding: 10px;
+.sectionLeft h2, .sectionRight  h2{
+	padding: 5px;
 }
 .sectionLeft p{
 	padding: 10px;
@@ -114,6 +137,7 @@ header h1 {
 }
 .sectionRight {
 	width: 250px;
+	margin: auto 70px;
 }
 .sectionRight p:firstChild {
 	padding: 10px;
@@ -121,13 +145,26 @@ header h1 {
 .sectionRight .user, .tel{
 	padding: 5px;
 }
-.cards{
-	padding-left:100px;
-}
+
 .cards .container1, .container2, .container3 {
 	box-shadow: 0px 0px 3px gray;
 	width: 330px;
 	margin-right: 15px;
+}
+.cards{
+	width: 100%;
+	padding: 10px;
+}
+@media only screen and (min-width: 768px){
+.cards .container1{
+	margin-left: 80px;
+}
+
+}
+@media only screen and (min-width: 1200px){
+	.cards .container1 {
+		margin-left: 190px;
+	}
 }
 .cards .container1 div{
 	background-color: #B7B7B7FF;
@@ -178,6 +215,7 @@ header h1 {
 
 }
 footer {
+	width: 100%;
 	margin-top: 15px;
 	text-align: center;
 	height: 60px;
