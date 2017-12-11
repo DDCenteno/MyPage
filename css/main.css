@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 /* config de grid System */
-.row::after, .row::before {
+.row::after {
 	content: "";
 	clear: both;
 	display: table;
@@ -13,12 +13,7 @@
 	float: left;
 	padding: 15px;
 }
-
 /* para mobile */
-[class*="col-"] {
-	width: 100%;
-}
-
 @media only screen and (min-width: 600px) {
  /* tablet :v */
    .col-m-1 {width: 8.33%;}
@@ -66,19 +61,27 @@ header h1 {
 	font-size: 16px;
 	font-weight: 100;
 }
+.menunav{
+
+}
 .menu {
 	float: right;
 	font-size: 16px;
 	color: #DDDF;
+	overflow: hidden;
 }
 .menu ul li {
 	list-style-type: none;
 	display: inline-block;
 	padding-right: 5px;
 }
+.menu ul li a{
+	color: white;
+}
 .menu ul li:hover {
 	color: white;
 }
+
 .banner {
 	width: 100%;
 	height: 200px;
